@@ -1,0 +1,32 @@
+.logo {
+  width: 96px;
+  height: 31px;
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logoUrl {
+  background-image: url(../images/DOYOGA-logo.png);
+}
+
+.logoWhiteUrl {
+  background-image: url(../images/DOYOGA.png);
+}
+
+.sns {
+  z-index: 5;
+}
+
+.ratio-3x2 {
+  @include media-breakpoint-up(md) {
+    --bs-aspect-ratio: 100%;
+  }
+}
+
+.stretch {
+  // -webkit-align-items: stretch; 
+  display: flex;
+  align-items: stretch;
+}

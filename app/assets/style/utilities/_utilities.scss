@@ -1,0 +1,79 @@
+$utilities: map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"),
+      (responsive: true,
+        values: map-merge(map-get(map-get($utilities, "font-weight"), "values"),
+          (medium: $font-weight-medium),
+        ),
+      ),
+    ),
+    "font-size": map-merge(map-get($utilities, "font-size"),
+      (responsive: true,
+        rfs:false,
+      ),
+    ),
+    "width": map-merge(map-get($utilities, "width"),
+      (responsive: true,
+        values: map-merge(map-get(map-get($utilities, "width"), "values"),
+          ("52px" :52px,
+            "96px" :96px,
+            "160px":160px,
+            "345px":345px,
+            "445px":445px,
+          ),
+        ),
+      ),
+    ),
+    "height": map-merge(map-get($utilities, "height"),
+      (responsive: true,
+        values: map-merge(map-get(map-get($utilities, "height"), "values"),
+          ("48px" :48px,
+            "52px" :52px,
+            "72px" :72px,
+            "96px" :96px,
+            "120px":120px,
+            "160px":160px,
+            "200px":200px,
+            "210px":210px,
+            "216px":216px,
+            "240px":240px,
+            "252px":252px,
+            "264px":264px,
+            //"320px":320px,
+            "340px":340px,
+            "360px":360px,
+            "420px":420px,
+            "445px":445px,
+            "488px":488px,
+            "628px":628px,
+          ),
+        ),
+      ),
+    ),
+    "ratio":(property: --bs-aspect-ratio,
+      class: ratio,
+      responsive: true,
+      values: $aspect-ratios,
+    ),
+  ),
+);
+
+.bg {
+  &Cover {
+    background-size: cover;
+  }
+
+  &Center {
+    background-position: center center;
+  }
+
+  &Bottom {
+    background-position: bottom center;
+  }
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
