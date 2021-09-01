@@ -15,11 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css" /> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
-  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -28,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container">
     <h1 class="fs-6 fw-normal mb-0">
-      <a class="logo logoUrl text-primary--light d-block" href="./index.html">DOYOGA</a>
+      <a class="logo logoUrl text-primary-light d-block" href="./index.html">DOYOGA</a>
     </h1>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,19 +35,24 @@
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item me-lg-1">
-          <a class="nav-link text-dark fw-light" aria-current="page" href="./course.html">課程介紹</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left" aria-current="page"
+            href="./course.html">課程介紹</a>
         </li>
         <li class="nav-item me-lg-1">
-          <a class="nav-link text-dark fw-light" href="./surroundings.html">瑜珈空間</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left"
+            href="./surroundings.html">瑜珈空間</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light" href="./curriculum.html">當月課表</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left"
+            href="./curriculum.html">當月課表</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light d-lg-none" href="./reservation.html">立即預約</a>
+          <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
+            href="./reservation.html">立即預約</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light d-lg-none" href="./contactUs.html">聯絡我們</a>
+          <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
+            href="./contactUs.html">聯絡我們</a>
         </li>
       </ul>
     </div>
@@ -59,14 +62,14 @@
     </div>
   </div>
 </nav>
-      <ul class="sns list-unstyled d-none d-lg-block position-fixed top-50 end-0 p-0.5">
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center mb-0.5">
+      <ul class="sns list-unstyled d-none d-lg-block position-fixed top-50 end-0 zindex-5 p-0.5">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop mb-0.5">
         <a href="#"><span class="fab fa-facebook text-primary fs-lg lh-1"></span></a>
     </li>
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center mb-0.5">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop mb-0.5">
         <a href="#"><span class="fab fa-instagram text-primary fs-lg lh-1"></span></a>
     </li>
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop">
         <a href="#"><span class="fab fa-line text-primary fs-lg lh-1"></span></a>
     </li>
 </ul>
@@ -75,23 +78,25 @@
   <main class="pt-3 pb-5.5 pt-md-4 pb-md-5 pb-lg-6.5">
   <section class="container">
     <h2 class="fs-2 text-primary text-center mb-1.5 mb-md-1">立即預約</h2>
-    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2 mb-md-1.5 mb-lg-2">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2.25 mb-md-2">
       <ol class="breadcrumb d-flex justify-content-center">
-        <li class="breadcrumb-item"><a href="#"
-            class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">選擇方案</a></li>
-        <li class="breadcrumb-item"><a href="#"
-            class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">填寫資料</a></li>
-        <li class="breadcrumb-item" aria-current="page">
-          <a href="#" class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">
-            完成預約 </a>
+        <li class="breadcrumb-item">
+          <p class="breadcrumb-text">選擇方案</p>
+        </li>
+        <li class="breadcrumb-item">
+          <p class="breadcrumb-text">填寫資料</p>
+        </li>
+        <li class="breadcrumb-item breadcrumb--active">
+          <p class="breadcrumb-text">完成預約
+          </p>
         </li>
       </ol>
     </nav>
-    <div class="row">
+    <div class="row mb-1.5" data-aos="zoom-in-up">
       <div class="col-md-8 col-lg-5 mx-auto">
         <span class="material-icons-outlined fs-lg text-primary d-flex justify-content-center mb-1">check_circle</span>
         <h3 class="fs-5 fw-normal text-primary text-center mb-2">已完成預約，以下是您的預約資訊:</h3>
-        <div class="card rounded-2 border border-primary--light mb-1.5">
+        <div class="card rounded-2 border border-primary-light">
           <div
             class="card-header rounded-top bg-primary text-white d-flex justify-content-between align-items-center px-1.25 py-1">
             <h4 class="fs-6 fw-normal">預約資訊</h4>
@@ -100,7 +105,7 @@
             </span>
           </div>
           <div class="card-body px-1.25 py-1">
-            <h6 class="card-title text-primary mb-1">您預約的是<span class="fs-5 text-primary--light ms-0.5">首次體驗課程-基礎</span>
+            <h6 class="card-title text-primary mb-1">您預約的是<span class="fs-5 text-primary-light ms-0.5">首次體驗課程-基礎</span>
             </h6>
             <ul class="list-unstyled text-primary d-grid gap-0.5">
               <li>上課預約報到日：2021/07/21</li>
@@ -112,9 +117,13 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row" data-aos="zoom-in-up">
+      <div class="col-md-6 col-lg-4 mx-auto">
         <h3 class="fs-5 text-primary text-center mb-0.5">上課注意事項</h3>
         <p class="text-primary mb-2">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。 如欲更改體驗時間請提前通知我們喔！</p>
-        <a href="./index.html" class="btn btn-primary--light text-white w-100">返回首頁</a>
+        <a href="./index.html" class="btn btn-primary-light text-white w-100">返回首頁</a>
       </div>
     </div>
   </section>
@@ -128,7 +137,7 @@
       <div class="input-group w-auto">
         <input type="email" class="form-control py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="subscriber's email"
           aria-describedby="subscribe">
-        <button class="btn btn-primary--light text-white" type="button" id="subscribe">訂閱</button>
+        <button class="btn btn-primary-light text-white" type="button" id="subscribe">訂閱</button>
       </div>
     </div>
     <div class="d-grid gap-0.5 py-1.5 py-md-2">
@@ -156,9 +165,9 @@
   </div>
 </div>
     </footer>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>

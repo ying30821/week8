@@ -15,11 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css" /> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
-  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -28,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container">
     <h1 class="fs-6 fw-normal mb-0">
-      <a class="logo logoUrl text-primary--light d-block" href="./index.html">DOYOGA</a>
+      <a class="logo logoUrl text-primary-light d-block" href="./index.html">DOYOGA</a>
     </h1>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,19 +35,24 @@
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item me-lg-1">
-          <a class="nav-link text-dark fw-light" aria-current="page" href="./course.html">課程介紹</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left" aria-current="page"
+            href="./course.html">課程介紹</a>
         </li>
         <li class="nav-item me-lg-1">
-          <a class="nav-link text-dark fw-light" href="./surroundings.html">瑜珈空間</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left"
+            href="./surroundings.html">瑜珈空間</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light" href="./curriculum.html">當月課表</a>
+          <a class="nav-link text-dark fw-light d-inline-block hvr-underline-from-left"
+            href="./curriculum.html">當月課表</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light d-lg-none" href="./reservation.html">立即預約</a>
+          <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
+            href="./reservation.html">立即預約</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark fw-light d-lg-none" href="./contactUs.html">聯絡我們</a>
+          <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
+            href="./contactUs.html">聯絡我們</a>
         </li>
       </ul>
     </div>
@@ -59,24 +62,24 @@
     </div>
   </div>
 </nav>
-      <ul class="sns list-unstyled d-none d-lg-block position-fixed top-50 end-0 p-0.5">
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center mb-0.5">
+      <ul class="sns list-unstyled d-none d-lg-block position-fixed top-50 end-0 zindex-5 p-0.5">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop mb-0.5">
         <a href="#"><span class="fab fa-facebook text-primary fs-lg lh-1"></span></a>
     </li>
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center mb-0.5">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop mb-0.5">
         <a href="#"><span class="fab fa-instagram text-primary fs-lg lh-1"></span></a>
     </li>
-    <li class="bg-white rounded-2 w-52px h-52px d-flex justify-content-center align-items-center">
+    <li class="bg-white rounded-2 w-50px h-50px d-flex justify-content-center align-items-center hvr-pop">
         <a href="#"><span class="fab fa-line text-primary fs-lg lh-1"></span></a>
     </li>
 </ul>
 
   </header>
-  <section class="pt-3 pb-5.5 pt-md-4 pb-md-7">
-  <div class="container">
+  <main class="pt-3 pb-5.5 pt-md-4 pb-md-7">
+  <section class="container">
     <h3 class="text-primary text-center fw-md-normal mb-1.5 mb-md-2">聯絡我們</h3>
     <div class="row">
-      <div class="col-md-10 col-lg-7 mx-md-auto mb-2.5">
+      <div class="col-md-10 col-lg-7 mx-md-auto mb-2.5" data-aos="zoom-out-up">
         <div class="ratio ratio-16x9 mb-1.5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29462.407590524723!2d120.30028133173919!3d22.62390711345968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e049783205c61%3A0xebaf934b04f62525!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A!5e0!3m2!1szh-TW!2stw!4v1629816327913!5m2!1szh-TW!2stw"
@@ -91,35 +94,36 @@
           <li>3. 開車前往北信街 32 號，教室旁有專屬停<br>車場可以使用。</li>
         </ul>
       </div>
-
-      <div class="col-md-10 col-lg-5 mx-md-auto">
+      <div class="col-md-10 col-lg-5 mx-md-auto" data-aos="zoom-out-down">
         <form class="bg-secondary rounded-3 p-2 pb-1.5">
           <h5 class="text-primary fw-normal mb-1.5">意見回饋&問題詢問</h5>
           <div class="mb-1">
             <label for="name" class="text-primary mb-0.5">姓名</label>
-            <input type="text" name="name" id="name" class="form-control border-primary--light w-100"
+            <input type="text" name="name" id="name" class="form-control border-primary-light w-100"
               placeholder="請輸入您的姓名">
           </div>
           <div class="mb-1">
             <label for="email" class="text-primary mb-0.5">電子信箱</label>
             <input type="email" name="email" id="email" placeholder="email@example.com"
-              class="form-control border-primary--light w-100">
+              class="form-control border-primary-light w-100">
           </div>
           <div class="mb-1">
             <label for="tel" class="text-primary mb-0.5">手機號碼</label>
-            <input type="tel" name="tel" id="tel" class="form-control border-primary--light w-100"
+            <input type="tel" name="tel" id="tel" class="form-control border-primary-light w-100"
               placeholder="0912-345-678">
           </div>
           <div class="mb-1.5">
             <label for="suggest" class="text-primary mb-0.5">意見回饋</label>
-            <input type="text" name="suggest" id="suggest" class="form-control border-primary--light w-100 h-216px">
+            <textarea name="suggest" id="suggest" rows="10" placeholder="請輸入您的意見" class="form-control"></textarea>
           </div>
-          <button type="button" class="btn btn-primary--light text-white d-flex justify-content-end">送出</button>
+          <div class="text-end">
+            <a class="btn btn-primary-light text-white" href="#">送出</a>
+          </div>
         </form>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
     <footer>
       <div class="bg-primary">
@@ -129,7 +133,7 @@
       <div class="input-group w-auto">
         <input type="email" class="form-control py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="subscriber's email"
           aria-describedby="subscribe">
-        <button class="btn btn-primary--light text-white" type="button" id="subscribe">訂閱</button>
+        <button class="btn btn-primary-light text-white" type="button" id="subscribe">訂閱</button>
       </div>
     </div>
     <div class="d-grid gap-0.5 py-1.5 py-md-2">
@@ -157,9 +161,9 @@
   </div>
 </div>
     </footer>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>

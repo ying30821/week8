@@ -3,6 +3,19 @@
 $(function () {
   console.log('Hello Bootstrap5');
 });
+AOS.init(); //datepicker
+
+var elem = document.querySelector('input[name="datepicker"]');
+
+if (elem !== null) {
+  var datepicker = new Datepicker(elem, {
+    nextArrow: '>',
+    prevArrow: '<',
+    buttonClass: 'btn primary'
+  });
+}
+"use strict";
+
 var variousCourseSwiper = new Swiper(".variousCourse-swiper", {
   slidesPerView: 1.5,
   spaceBetween: 30
@@ -30,7 +43,8 @@ var recommendSwiper = new Swiper(".recommend-swiper", {
       slidesPerView: 3,
       grid: {
         rows: 2
-      }
+      },
+      spaceBetween: 30
     }
   },
   direction: 'horizontal'
@@ -54,7 +68,8 @@ var teacherSwiper = new Swiper(".teacher-swiper", {
       slidesPerView: 3,
       grid: {
         rows: 1
-      }
+      },
+      spaceBetween: 30
     }
   },
   direction: 'horizontal'
@@ -90,16 +105,10 @@ var chooseCourseSwiper = new Swiper(".chooseCourse-swiper", {
       slidesPerView: 2.5,
       grid: {
         rows: 1
-      }
+      },
+      spaceBetween: 30
     }
   },
   direction: 'horizontal'
-}); //datepicker
-
-var elem = document.querySelector('input[name="datepicker"]');
-var datepicker = new Datepicker(elem, {
-  nextArrow: '>',
-  prevArrow: '<',
-  buttonClass: 'btn primary'
 });
 //# sourceMappingURL=all.js.map
