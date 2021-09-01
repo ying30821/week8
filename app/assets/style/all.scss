@@ -3,9 +3,11 @@
 @import "../../../node_modules/bootstrap/scss/utilities";
 @import "./utilities/utilities";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import './reboot';
-@import './components/sns';
+@import './helpers/reboot';
+@import './components/image';
+@import './components/card';
+@import './components/form';
+@import './components/breadcrumb';
 @import './components/swiper';
 @import './components/datepicker';
-@import './layout/layout';
-@import './layout/index';
+@import './utilities/hover';

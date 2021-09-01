@@ -76,7 +76,7 @@ $dark: #707070 !default; //$gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
-  "primary--light":$primary-light,
+  "primary-light":$primary-light,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
@@ -244,26 +244,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
-$spacers: ( //0: 0,
-  // 1: $spacer * .125,
-  // 2: $spacer * .25,
-  // 3: $spacer * .5,
-  // 4: $spacer * .625,
-  // 5: $spacer * .875,
-  // 6: $spacer * .9375,
-  // 7: $spacer,
-  // 8: $spacer * 1.25,
-  // 9: $spacer * 1.5,
-  // 10: $spacer * 1.75,
-  // 11: $spacer * 1.875,
-  // 12: $spacer * 2,
-  // 13: $spacer * 2.5,
-  // 14: $spacer * 3,
-  // 15: $spacer * 4,
-  // 16: $spacer * 5.5,
-  // 17: $spacer * 6.5,
-
-  0: 0,
+$spacers: (0: 0,
   0\.125:$spacer * .125,
   0\.25: $spacer * .25,
   0\.5: $spacer * .5,
@@ -286,6 +267,7 @@ $spacers: ( //0: 0,
   5\.5: $spacer * 5.5,
   6\.5: $spacer * 6.5,
   7: $spacer * 7,
+  off: $spacer * -6,
   // 1: $spacer * .25,
   // 2: $spacer * .5,
   // 3: $spacer,
@@ -432,6 +414,9 @@ $transition-collapse: height .35s ease !default;
 $aspect-ratios: ("1x1": 100%,
   "3x2": calc(2 / 3 * 100%), //new
   "4x3": calc(3 / 4 * 100%),
+  "5x6": calc(6 / 5 * 100%), //new
+  "6x7": calc(7 / 6 * 100%), //new
+  "11x14":calc(14 / 11 * 100%), //new
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
   "25x12": calc(12/25 * 100%), //new
@@ -648,8 +633,8 @@ $input-btn-padding-y-sm: .25rem !default;
 $input-btn-padding-x-sm: .5rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
-$input-btn-padding-y-lg: .75rem !default; //.5rem !default;
-$input-btn-padding-x-lg: 3rem !default; //1rem !default;
+$input-btn-padding-y-lg: .5rem !default; //.5rem !default;
+$input-btn-padding-x-lg: 4rem !default; //1rem !default;
 $input-btn-font-size-lg: $font-size-lg !default;
 
 $input-btn-border-width: $border-width !default;
@@ -964,8 +949,9 @@ $zindex-modal: 1060 !default;
 $zindex-popover: 1070 !default;
 $zindex-tooltip: 1080 !default;
 // scss-docs-end zindex-stack
-
-
+//new custom zindex
+$zindex-value:(5:5,
+);
 // Navs
 
 // scss-docs-start nav-variables

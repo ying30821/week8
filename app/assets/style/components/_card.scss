@@ -1,0 +1,15 @@
+.card__course--active {
+  border: 4px solid $primary-light;
+}
+
+.card__level--active {
+  border: 4px solid $white;
+
+  .card-icon {
+    opacity: 1;
+  }
+}
+
+.card-icon {
+  opacity: 0.5;
+}

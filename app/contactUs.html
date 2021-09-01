@@ -4,11 +4,11 @@ layout: ./app/layout.ejs
 engine: ejs
 current: contactUs
 ---
-<section class="pt-3 pb-5.5 pt-md-4 pb-md-7">
-  <div class="container">
+<main class="pt-3 pb-5.5 pt-md-4 pb-md-7">
+  <section class="container">
     <h3 class="text-primary text-center fw-md-normal mb-1.5 mb-md-2">聯絡我們</h3>
     <div class="row">
-      <div class="col-md-10 col-lg-7 mx-md-auto mb-2.5">
+      <div class="col-md-10 col-lg-7 mx-md-auto mb-2.5" data-aos="zoom-out-up">
         <div class="ratio ratio-16x9 mb-1.5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29462.407590524723!2d120.30028133173919!3d22.62390711345968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e049783205c61%3A0xebaf934b04f62525!2zODAy6auY6ZuE5biC6IuT6ZuF5Y2A!5e0!3m2!1szh-TW!2stw!4v1629816327913!5m2!1szh-TW!2stw"
@@ -23,32 +23,33 @@ current: contactUs
           <li>3. 開車前往北信街 32 號，教室旁有專屬停<br>車場可以使用。</li>
         </ul>
       </div>
-
-      <div class="col-md-10 col-lg-5 mx-md-auto">
+      <div class="col-md-10 col-lg-5 mx-md-auto" data-aos="zoom-out-down">
         <form class="bg-secondary rounded-3 p-2 pb-1.5">
           <h5 class="text-primary fw-normal mb-1.5">意見回饋&問題詢問</h5>
           <div class="mb-1">
             <label for="name" class="text-primary mb-0.5">姓名</label>
-            <input type="text" name="name" id="name" class="form-control border-primary--light w-100"
+            <input type="text" name="name" id="name" class="form-control border-primary-light w-100"
               placeholder="請輸入您的姓名">
           </div>
           <div class="mb-1">
             <label for="email" class="text-primary mb-0.5">電子信箱</label>
             <input type="email" name="email" id="email" placeholder="email@example.com"
-              class="form-control border-primary--light w-100">
+              class="form-control border-primary-light w-100">
           </div>
           <div class="mb-1">
             <label for="tel" class="text-primary mb-0.5">手機號碼</label>
-            <input type="tel" name="tel" id="tel" class="form-control border-primary--light w-100"
+            <input type="tel" name="tel" id="tel" class="form-control border-primary-light w-100"
               placeholder="0912-345-678">
           </div>
           <div class="mb-1.5">
             <label for="suggest" class="text-primary mb-0.5">意見回饋</label>
-            <input type="text" name="suggest" id="suggest" class="form-control border-primary--light w-100 h-216px">
+            <textarea name="suggest" id="suggest" rows="10" placeholder="請輸入您的意見" class="form-control"></textarea>
           </div>
-          <button type="button" class="btn btn-primary--light text-white d-flex justify-content-end">送出</button>
+          <div class="text-end">
+            <a class="btn btn-primary-light text-white" href="#">送出</a>
+          </div>
         </form>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>

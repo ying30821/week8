@@ -13,11 +13,7 @@ $utilities: map-merge($utilities, ("font-weight": map-merge(map-get($utilities, 
     "width": map-merge(map-get($utilities, "width"),
       (responsive: true,
         values: map-merge(map-get(map-get($utilities, "width"), "values"),
-          ("52px" :52px,
-            "96px" :96px,
-            "160px":160px,
-            "345px":345px,
-            "445px":445px,
+          ("50px" :50px,
           ),
         ),
       ),
@@ -26,24 +22,13 @@ $utilities: map-merge($utilities, ("font-weight": map-merge(map-get($utilities, 
       (responsive: true,
         values: map-merge(map-get(map-get($utilities, "height"), "values"),
           ("48px" :48px,
-            "52px" :52px,
+            "50px" :50px,
             "72px" :72px,
             "96px" :96px,
-            "120px":120px,
-            "160px":160px,
             "200px":200px,
-            "210px":210px,
             "216px":216px,
-            "240px":240px,
-            "252px":252px,
-            "264px":264px,
-            //"320px":320px,
             "340px":340px,
-            "360px":360px,
-            "420px":420px,
-            "445px":445px,
             "488px":488px,
-            "628px":628px,
           ),
         ),
       ),
@@ -76,4 +61,11 @@ $utilities: map-merge($utilities, ("font-weight": map-merge(map-get($utilities, 
 
 .overflow-y-hidden {
   overflow-y: hidden;
+}
+
+@each $name,
+$value in $zindex-value {
+  .zindex-#{$name} {
+    z-index: $value;
+  }
 }

@@ -1,3 +1,8 @@
+.hero {
+  background-image: url(../images/hero.jpeg);
+  height: 560px;
+}
+
 .logo {
   width: 96px;
   height: 31px;
@@ -13,20 +18,4 @@
 
 .logoWhiteUrl {
   background-image: url(../images/DOYOGA.png);
-}
-
-.sns {
-  z-index: 5;
-}
-
-.ratio-3x2 {
-  @include media-breakpoint-up(md) {
-    --bs-aspect-ratio: 100%;
-  }
-}
-
-.stretch {
-  // -webkit-align-items: stretch; 
-  display: flex;
-  align-items: stretch;
 }

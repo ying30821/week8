@@ -7,32 +7,34 @@ current: reservation-apply
 <main class="pt-3 pb-5.5 pt-md-4 pb-md-5 pb-lg-6.5">
   <section class="container">
     <h2 class="fs-2 text-primary text-center mb-1.5 mb-md-1">立即預約</h2>
-    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-1.5">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
       <ol class="breadcrumb d-flex justify-content-center">
-        <li class="breadcrumb-item"><a href="#"
-            class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">選擇方案</a></li>
-        <li class="breadcrumb-item"><a href="#"
-            class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">填寫資料</a></li>
-        <li class="breadcrumb-item" aria-current="page">
-          <a href="#" class="btn btn-secondary text-primary rounded-3 px-1 py-0.75 px-lg-3">
-            完成預約 </a>
+        <li class="breadcrumb-item breadcrumb--active">
+          <p class="breadcrumb-text">選擇方案</p>
+        </li>
+        <li class="breadcrumb-item">
+          <p class="breadcrumb-text">填寫資料</p>
+        </li>
+        <li class="breadcrumb-item">
+          <p class="breadcrumb-text">完成預約
+          </p>
         </li>
       </ol>
     </nav>
     <form>
-      <h6 class="text-center fw-normal mb-1.5">您選擇的是 <span class="fs-5 text-primary--light ms-1">首次體驗課程-基礎</span></h6>
+      <h6 class="text-center fw-normal mb-1.5">您選擇的是 <span class="fs-5 text-primary-light ms-1">首次體驗課程-基礎</span></h6>
       <div class="row">
         <div class="col-md-7 col-lg-5 mx-auto">
           <!-- question1 -->
           <div class="mb-2">
             <label class="d-block mb-1">1. 是否接觸過瑜珈?</label>
             <div class="form-check form-check-inline me-2">
-              <input class="form-check-input border-primary--light" type="radio" name="contactOption"
-                id="contactOption1" checked>
+              <input class="form-check-input border-primary-light" type="radio" name="contactOption"
+                id="contactOption1">
               <label class="form-check-label" for="contactOption1">是</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input border-primary--light" type="radio" name="contactOption"
+              <input class="form-check-input border-primary-light" type="radio" name="contactOption"
                 id="contactOption2">
               <label class="form-check-label" for="contactOption2">否</label>
             </div>
@@ -43,42 +45,42 @@ current: reservation-apply
             <div class="row row-cols-3 gx-0.75 gy-1">
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption1">
                   <label class="form-check-label" for="improveOption1">肌耐力不足</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption2">
                   <label class="form-check-label" for="improveOption2">柔軟度不佳</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption3">
                   <label class="form-check-label" for="improveOption3">壓力大</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption4">
                   <label class="form-check-label" for="improveOption4">姿勢不正</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption5">
                   <label class="form-check-label" for="improveOption5">睡眠品質差</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input border-primary--light" type="checkbox" name="improveOption"
+                  <input class="form-check-input border-primary-light" type="checkbox" name="improveOption"
                     id="improveOption6">
                   <label class="form-check-label" for="improveOption6">注意力不足</label>
                 </div>
@@ -91,15 +93,15 @@ current: reservation-apply
             <div class="row row-cols-2 gy-1">
               <div class="col">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input border-primary--light" type="radio" name="exerciseOption"
-                    id="exerciseOption1" checked>
+                  <input class="form-check-input border-primary-light" type="radio" name="exerciseOption"
+                    id="exerciseOption1">
                   <label class="form-check-label" for="exerciseOption1">150 分鐘以上
                   </label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input border-primary--light" type="radio" name="exerciseOption"
+                  <input class="form-check-input border-primary-light" type="radio" name="exerciseOption"
                     id="exerciseOption2">
                   <label class="form-check-label" for="exerciseOption2">75~150 分鐘
                   </label>
@@ -107,7 +109,7 @@ current: reservation-apply
               </div>
               <div class="col">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input border-primary--light" type="radio" name="exerciseOption"
+                  <input class="form-check-input border-primary-light" type="radio" name="exerciseOption"
                     id="exerciseOption3">
                   <label class="form-check-label" for="exerciseOption3">30~75 分鐘
                   </label>
@@ -115,7 +117,7 @@ current: reservation-apply
               </div>
               <div class="col">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input border-primary--light" type="radio" name="exerciseOption"
+                  <input class="form-check-input border-primary-light" type="radio" name="exerciseOption"
                     id="exerciseOption4">
                   <label class="form-check-label" for="exerciseOption4">30 分鐘以下
                   </label>
@@ -128,7 +130,7 @@ current: reservation-apply
             <label class="d-block mb-1">4. 上課預約報到日</label>
             <p class="mb-0.5">若還沒有確定的日期，可以等待專員與您聯絡時在做詳細的諮詢哦！</p>
             <input type="text" placeholder="MM/DD/YYYY" name="datepicker"
-              class="form-control w-auto placeHolder-primary--light">
+              class="form-control w-auto placeHolder-primary-light">
           </div>
           <!-- question5 -->
           <div class="mb-2">
@@ -136,12 +138,12 @@ current: reservation-apply
             <div class="row gy-1">
               <div class="col-6">
                 <label for="name" class="text-primary d-block mb-0.5">姓名</label>
-                <input type="text" name="name" id="name" class="form-control placeHolder-primary--light"
+                <input type="text" name="name" id="name" class="form-control placeHolder-primary-light"
                   placeholder="請輸入您的姓名">
               </div>
               <div class="col-6">
                 <label for="age" class="text-primary d-block mb-0.5">年齡</label>
-                <input type="number" name="age" id="age" class="form-control placeHolder-primary--light"
+                <input type="number" name="age" id="age" class="form-control placeHolder-primary-light"
                   placeholder="請輸入您的年齡">
               </div>
               <div>
@@ -154,19 +156,19 @@ current: reservation-apply
               </div>
               <div>
                 <label for="email" class="text-primary d-block mb-0.5">電子信箱</label>
-                <input type="email" name="email" id="email" class="form-control placeHolder-primary--light"
+                <input type="email" name="email" id="email" class="form-control placeHolder-primary-light"
                   placeholder="email@example.com">
               </div>
               <div>
                 <label for="tel" class="text-primary d-block mb-0.5">手機號碼</label>
-                <input type="tel" name="tel" id="tel" class="form-control placeHolder-primary--light"
+                <input type="tel" name="tel" id="tel" class="form-control placeHolder-primary-light"
                   placeholder="0912-345-678">
               </div>
             </div>
 
           </div>
 
-          <a href="./reservation-done.html" class="btn btn-primary--light text-white w-100">送出</a>
+          <a href="./reservation-done.html" class="btn btn-primary-light text-white w-100">送出</a>
 
         </div>
     </form>
