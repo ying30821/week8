@@ -3,6 +3,7 @@ const distPath = './dist';
 const nodePath = './node_modules';
 
 let envOptions = {
+  ghPageCustomDomain: 'gulp.lu.me',
   string: 'env',
   default: {
     env: 'dev',
