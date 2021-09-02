@@ -4,7 +4,6 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
-const fs = require('fs'); //new
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
 console.log(`Current mode：${options.env}`);
@@ -97,7 +96,6 @@ function clean() {
 }
 
 function deploy() {
-  fs.writeFile('dist/CNAME', envOptions.ghPageCustomDomain, function(err) {});
   return gulp.src(envOptions.deploySrc)
     .pipe($.ghPages());
 }
