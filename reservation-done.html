@@ -48,7 +48,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
-            href="./reservation.html">立即預約</a>
+            href="./reservation-choose.html">立即預約</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
@@ -57,7 +57,7 @@
       </ul>
     </div>
     <div class="d-none d-lg-flex gap-1">
-      <a href="./reservation.html" class="btn btn-outline-primary rounded-pill">立即預約</a>
+      <a href="./reservation-choose.html" class="btn btn-outline-primary rounded-pill">立即預約</a>
       <a href="./contactUs.html" class="btn btn-outline-primary rounded-pill">聯絡我們</a>
     </div>
   </div>
@@ -99,22 +99,27 @@
         <div class="card rounded-2 border border-primary-light">
           <div
             class="card-header rounded-top bg-primary text-white d-flex justify-content-between align-items-center px-1.25 py-1">
-            <h4 class="fs-6 fw-normal">預約資訊</h4>
-            <span class="material-icons fs-4">
-              expand_more
-            </span>
+            <h4 class="fs-6 fw-normal mb-0">預約資訊</h4>
+            <button class="btn d-inline-flex p-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseReserveDone" aria-expanded="false" aria-controls="collapseReserveDone">
+              <span class="material-icons text-white fs-4 lh-1">expand_more
+              </span>
+            </button>
           </div>
-          <div class="card-body px-1.25 py-1">
-            <h6 class="card-title text-primary mb-1">您預約的是<span class="fs-5 text-primary-light ms-0.5">首次體驗課程-基礎</span>
-            </h6>
-            <ul class="list-unstyled text-primary d-grid gap-0.5">
-              <li>上課預約報到日：2021/07/21</li>
-              <li>預約人：Joanne Chen</li>
-              <li>年齡：18 歲</li>
-              <li>性別：女</li>
-              <li>電子信箱：example123@gmail.com</li>
-              <li>手機號碼：0912-345-678</li>
-            </ul>
+          <div class="collapse show" id="collapseReserveDone">
+            <div class="card-body px-1.25 py-1">
+              <h6 class="card-title text-primary mb-1">您預約的是<span
+                  class="fs-5 text-primary-light ms-0.5">首次體驗課程-基礎</span>
+              </h6>
+              <ul class="list-unstyled text-primary d-grid gap-0.5">
+                <li>上課預約報到日：2021/07/21</li>
+                <li>預約人：Joanne Chen</li>
+                <li>年齡：18 歲</li>
+                <li>性別：女</li>
+                <li>電子信箱：example123@gmail.com</li>
+                <li>手機號碼：0912-345-678</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -132,7 +137,7 @@
     <footer>
       <div class="bg-primary">
   <div class="container">
-    <div class="d-flex flex-column flex-lg-row justify-content-lg-between border-bottom border-white py-1.5 py-md-2">
+    <div class="d-flex flex-column flex-lg-row justify-content-lg-between py-1.5 py-md-2">
       <h3 class="text-white mb-0.5">現在訂閱，獲得課程優惠碼！</h3>
       <div class="input-group w-auto">
         <input type="email" class="form-control py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="subscriber's email"
@@ -140,6 +145,9 @@
         <button class="btn btn-primary-light text-white" type="button" id="subscribe">訂閱</button>
       </div>
     </div>
+  </div>
+  <hr class="bg-white opacity-1 my-0">
+  <div class="container">
     <div class="d-grid gap-0.5 py-1.5 py-md-2">
       <div class="d-flex justify-content-between">
         <a href="./index.html" class="logo logoWhiteUrl d-block">DOYOGA</a>

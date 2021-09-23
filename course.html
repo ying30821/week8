@@ -48,7 +48,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
-            href="./reservation.html">立即預約</a>
+            href="./reservation-choose.html">立即預約</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark fw-light d-inline-block d-lg-none hvr-underline-from-left"
@@ -57,7 +57,7 @@
       </ul>
     </div>
     <div class="d-none d-lg-flex gap-1">
-      <a href="./reservation.html" class="btn btn-outline-primary rounded-pill">立即預約</a>
+      <a href="./reservation-choose.html" class="btn btn-outline-primary rounded-pill">立即預約</a>
       <a href="./contactUs.html" class="btn btn-outline-primary rounded-pill">聯絡我們</a>
     </div>
   </div>
@@ -75,26 +75,31 @@
 </ul>
 
   </header>
-  <main>
+  <main data-page="course">
   <!-- 課程介紹 -->
   <section class="container py-3 py-md-4">
-    <h2 class="fs-3 text-primary text-center fw-normal mb-1.5">課程介紹</h2>
     <div class="row">
-      <div class="col-md-6 mb-0.5 mb-md-0" data-aos="fade-right">
-        <img src="./assets/images/topTeacher-bg.jpeg" alt="" class="rounded-3 w-100 h-216px h-md-340px object-cover">
-      </div>
-      <div class="col-md-6" data-aos="fade-left">
-        <h3 class="text-primary">本月限定課程 - 空中瑜珈</h3>
-        <div class="d-flex align-items-center mb-1">
-          <p class="text-primary-light me-0.5">授課老師：Carol Tang</p>
-          <p class="bg-primary text-white fs-7 fw-light rounded-pill px-1 py-0.25">60 min</p>
+      <div class="col-lg-10 mx-auto">
+        <h2 class="fs-3 text-primary text-center fw-normal mb-1.5">課程介紹</h2>
+        <div class="row">
+          <div class="col-md-6 mb-0.5 mb-md-0" data-aos="fade-right">
+            <img src="./assets/images/topTeacher-bg.jpeg" alt="限定課程照片"
+              class="rounded-3 w-100 h-216px h-md-340px object-cover">
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h3 class="text-primary">本月限定課程 - 空中瑜珈</h3>
+            <p class="text-primary-light mb-1">授課老師：Carol Tang <span
+                class="badge rounded-pill bg-primary text-white fs-7 fw-light lh-base px-1 py-0.25 ms-0.5">60
+                min</span></p>
+            <p class="text-primary mb-1">
+              使用掛布懸掛在半空，進行哈達瑜珈體位法練習<br>藉由地心引力的重力原理<br>鍛鍊核心肌群，舒緩脊椎壓力<br>訓練身體協調性，深層放鬆身體<br>課堂裡老師會視同學狀況安排教導倒立動作<br>對於不敢嘗試倒立的同學來說<br>藉由掛布的支持與保護<br>加上老師細心指導，讓同學能更快掌握
+            </p>
+            <a class="btn btn-primary-light text-white" href="./reservation-choose.html" role="button">立即預約</a>
+          </div>
         </div>
-        <p class="text-primary mb-1">
-          使用掛布懸掛在半空，進行哈達瑜珈體位法練習<br>藉由地心引力的重力原理<br>鍛鍊核心肌群，舒緩脊椎壓力<br>訓練身體協調性，深層放鬆身體<br>課堂裡老師會視同學狀況安排教導倒立動作<br>對於不敢嘗試倒立的同學來說<br>藉由掛布的支持與保護<br>加上老師細心指導，讓同學能更快掌握
-        </p>
-        <a class="btn btn-primary-light text-white" href="./reservation.html" role="button">立即預約</a>
       </div>
     </div>
+
   </section>
   <!-- 搜尋課程 -->
   <div class="bg-primary-light py-1.25 mb-3">
@@ -116,117 +121,110 @@
       </div>
     </div>
   </div>
-  <section class="container border-bottom border-primary pb-3 pb-lg-4">
+  <section class="container mb-3 mb-lg-4">
     <div class="row">
       <div class="col-lg-9 mb-2.5 mb-lg-0">
         <div class="row gy-1.875">
           <div class="col-md-6 col-lg-7" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-1.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-24">
                 <h5>基礎 Basic</h5>
                 <p>授課老師：Carol Tang</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
+
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-2.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>艾揚格 Iyengar</h5>
                 <p>授課老師：Kanae</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-3.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>哈達 Hatha</h5>
                 <p>授課老師：Kuzuha</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-7" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/plan-1.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>寰宇 Universal</h5>
                 <p>授課老師：Kuzuha</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-7" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-4.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>雙人飛行 Arco Yoga</h5>
                 <p>授課老師：Kuzuha、Kanae</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-5.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>阿斯坦加 Ashtanga</h5>
                 <p>授課老師：Kanae</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/course-6.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>陰陽 Yin Yang</h5>
                 <p>授課老師：Asa Chen</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-md-6 col-lg-7" data-aos="flip-right">
-            <div class="card">
+            <a class="js-courseCard card hvr-float" href="">
               <img src="./assets/images/space-1.jpg" class=" card-img object-cover h-200px" alt="課程照片">
               <div class="card-img-overlay text-white d-flex flex-column justify-content-end p-md-1 p-lg-1.5">
                 <h5>香氛 Aroma Yoga</h5>
                 <p>授課老師：Asa Chen</p>
-                <p
-                  class="bg-primary-light text-white fs-7 fw-light rounded-pill px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">
-                  60 min
-                </p>
+                <span
+                  class="badge rounded-pill bg-primary-light text-white fs-7 fw-light lh-base px-1 py-0.25 position-absolute top-0 left-0 translate-middle-y">60
+                  min</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-md-6 col-lg-3 mx-md-auto">
         <div class="text-primary">
           <h5 class="fw-normal mb-0.5">DOYOGA 上課須知：</h5>
           <ul class="list-unstyled d-grid gap-0.25">
@@ -239,9 +237,39 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-primary-light">
+          <div class="modal-body px-3.5 py-4">
+            <div class="row">
+              <div class="col-md-6 mb-0.5 mb-md-0">
+                <div class="ratio ratio-1x1">
+                  <img src="./assets/images/topTeacher-bg.jpeg" alt="限定課程照片"
+                    class="js-modal-img rounded-3 w-100 object-cover">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h3 class="js-modal-title text-white fw-medium">基礎 Basic</h3>
+                <p class="text-white mb-1">
+                  <span class="js-modal-teacher">授課老師：Carol Tang</span>
+                  <span class="badge rounded-pill bg-primary text-white fs-7 fw-light lh-base px-1 py-0.25 ms-0.5">60
+                    min</span>
+                </p>
+                <p class="text-white mb-1">
+                  使用掛布懸掛在半空，進行哈達瑜珈體位法練習<br>藉由地心引力的重力原理<br>鍛鍊核心肌群，舒緩脊椎壓力<br>訓練身體協調性，深層放鬆身體<br>課堂裡老師會視同學狀況安排教導倒立動作<br>對於不敢嘗試倒立的同學來說<br>藉由掛布的支持與保護<br>加上老師細心指導，讓同學能更快掌握
+                </p>
+                <a class="btn btn-secondary text-primary hvr-btn-secondary" href="./reservation-choose.html"
+                  role="button">立即預約</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
+  <hr class="bg-primary opacity-1 mt-0 mb-2 mb-lg-2.5">
   <!-- 師資介紹 -->
-  <section class="container pt-2 pb-5 pb-lg-7">
+  <section class="container mb-5 mb-lg-7">
     <h2 class="fs-3 text-primary text-center fw-normal mb-0">師資介紹</h2>
     <div class="swiper teacher-swiper pt-4.5">
       <ul class="swiper-wrapper list-unstyled">
@@ -250,7 +278,7 @@
             <img src="./assets/images/teacher-1.png"
               class="card-image w-auto h-96px position-absolute top-0 start-50 translate-middle rounded-circle border border-4 border-primary"
               alt="Carol Tang 老師">
-            <div class="card-body text-white pt-3.5 h-auto">
+            <div class="card-body text-white pt-3.5">
               <h5 class="text-center fw-normal mb-0.25">Carol Tang 老師</h5>
               <p class="text-center mb-1">教學經歷 10 年</p>
               <p class="fw-light mb-1">“因為瑜珈讓我重新認識自己的身體，也讓我有了不一樣的人生。 我希望能跟學生們分享瑜珈的好，讓大 家能藉由瑜珈看見自己的內在與潛能，
@@ -325,7 +353,7 @@
     <footer>
       <div class="bg-primary">
   <div class="container">
-    <div class="d-flex flex-column flex-lg-row justify-content-lg-between border-bottom border-white py-1.5 py-md-2">
+    <div class="d-flex flex-column flex-lg-row justify-content-lg-between py-1.5 py-md-2">
       <h3 class="text-white mb-0.5">現在訂閱，獲得課程優惠碼！</h3>
       <div class="input-group w-auto">
         <input type="email" class="form-control py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="subscriber's email"
@@ -333,6 +361,9 @@
         <button class="btn btn-primary-light text-white" type="button" id="subscribe">訂閱</button>
       </div>
     </div>
+  </div>
+  <hr class="bg-white opacity-1 my-0">
+  <div class="container">
     <div class="d-grid gap-0.5 py-1.5 py-md-2">
       <div class="d-flex justify-content-between">
         <a href="./index.html" class="logo logoWhiteUrl d-block">DOYOGA</a>

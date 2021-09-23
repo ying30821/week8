@@ -23,6 +23,10 @@
   z-index: 5;
 }
 
+.opacity-1 {
+  opacity: 1;
+}
+
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -102,43 +106,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
+  font-size: 2.5rem;
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
+  font-size: 2rem;
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
+  font-size: 1.75rem;
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
-}
-
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
+  font-size: 1.5rem;
 }
 
 h5, .h5 {
@@ -409,14 +389,8 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 0.5rem;
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: 1.5rem;
   line-height: inherit;
-}
-
-@media (min-width: 1200px) {
-  legend {
-    font-size: 1.5rem;
-  }
 }
 
 legend + * {
@@ -494,75 +468,39 @@ progress {
 }
 
 .display-1 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: 5rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-1 {
-    font-size: 5rem;
-  }
 }
 
 .display-2 {
-  font-size: calc(1.575rem + 3.9vw);
+  font-size: 4.5rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-2 {
-    font-size: 4.5rem;
-  }
 }
 
 .display-3 {
-  font-size: calc(1.525rem + 3.3vw);
+  font-size: 4rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-3 {
-    font-size: 4rem;
-  }
 }
 
 .display-4 {
-  font-size: calc(1.475rem + 2.7vw);
+  font-size: 3.5rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-4 {
-    font-size: 3.5rem;
-  }
 }
 
 .display-5 {
-  font-size: calc(1.425rem + 2.1vw);
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-5 {
-    font-size: 3rem;
-  }
 }
 
 .display-6 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.5;
-}
-
-@media (min-width: 1200px) {
-  .display-6 {
-    font-size: 2.5rem;
-  }
 }
 
 .list-unstyled {
@@ -18885,13 +18823,6 @@ fieldset:disabled .btn {
   }
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 main {
   overflow-x: hidden;
 }
@@ -18928,8 +18859,8 @@ ul {
   background-image: url(../images/DOYOGA.png);
 }
 
-.card__course--active {
-  border: 4px solid #C0A4A5;
+.card__lesson--active {
+  border-width: 4px !important;
 }
 
 .card__level--active {
@@ -19035,7 +18966,20 @@ ul {
 
 .btn-primary-light:hover {
   background: #907A7B;
+  border-color: #907A7B;
   color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #C0A4A5;
+  border-color: #C0A4A5;
+  color: #fff !important;
+}
+
+.hvr-btn-secondary:hover {
+  background: #907A7B;
+  border-color: #907A7B;
+  color: #fff !important;
 }
 
 .hvr-border-white:hover {
