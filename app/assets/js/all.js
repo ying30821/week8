@@ -1,5 +1,5 @@
 $(function() {
-  console.log('Hello Bootstrap5');
+  //console.log('Hello Bootstrap5');
 });
 AOS.init();
 
