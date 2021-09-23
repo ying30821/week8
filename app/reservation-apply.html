@@ -22,15 +22,16 @@ current: reservation-apply
       </ol>
     </nav>
     <form>
-      <h6 class="text-center fw-normal mb-1.5">您選擇的是 <span class="fs-5 text-primary-light ms-1">首次體驗課程-基礎</span></h6>
+      <h3 class="text-center fw-normal fs-6 mb-1.5">您選擇的是 <span class="fs-5 text-primary-light ms-1">首次體驗課程-基礎</span>
+      </h3>
       <div class="row">
         <div class="col-md-7 col-lg-5 mx-auto">
           <!-- question1 -->
           <div class="mb-2">
-            <label class="d-block mb-1">1. 是否接觸過瑜珈?</label>
+            <h4 class="fs-6 fw-normal d-block mb-1">1. 是否接觸過瑜珈?</h4>
             <div class="form-check form-check-inline me-2">
-              <input class="form-check-input border-primary-light" type="radio" name="contactOption"
-                id="contactOption1">
+              <input class="form-check-input border-primary-light" type="radio" name="contactOption" id="contactOption1"
+                checked>
               <label class="form-check-label" for="contactOption1">是</label>
             </div>
             <div class="form-check form-check-inline">
@@ -41,7 +42,7 @@ current: reservation-apply
           </div>
           <!-- question2 -->
           <div class="mb-2">
-            <label class="d-block mb-1">2. 想改善的生活問題?</label>
+            <h4 class="fs-6 fw-normal d-block mb-1">2. 想改善的生活問題?</h4>
             <div class="row row-cols-3 gx-0.75 gy-1">
               <div class="col">
                 <div class="form-check">
@@ -89,12 +90,12 @@ current: reservation-apply
           </div>
           <!-- question3 -->
           <div class="mb-2">
-            <label class="d-block mb-1">3. 每週累積運動量約為多少？</label>
+            <h4 class="fs-6 fw-normal d-block mb-1">3. 每週累積運動量約為多少？</h4>
             <div class="row row-cols-2 gy-1">
               <div class="col">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input border-primary-light" type="radio" name="exerciseOption"
-                    id="exerciseOption1">
+                    id="exerciseOption1" checked>
                   <label class="form-check-label" for="exerciseOption1">150 分鐘以上
                   </label>
                 </div>
@@ -127,14 +128,14 @@ current: reservation-apply
           </div>
           <!-- question4 -->
           <div class="mb-2">
-            <label class="d-block mb-1">4. 上課預約報到日</label>
+            <h4 class="fs-6 fw-normal d-block mb-1">4. 上課預約報到日</h4>
             <p class="mb-0.5">若還沒有確定的日期，可以等待專員與您聯絡時在做詳細的諮詢哦！</p>
             <input type="text" placeholder="MM/DD/YYYY" name="datepicker"
               class="form-control w-auto placeHolder-primary-light">
           </div>
           <!-- question5 -->
           <div class="mb-2">
-            <label class="d-block mb-1">5. 填寫基本資料，完成預約後會寄送通知至電子信箱</label>
+            <h4 class="fs-6 fw-normal d-block mb-1">5. 填寫基本資料，完成預約後會寄送通知至電子信箱</h4>
             <div class="row gy-1">
               <div class="col-6">
                 <label for="name" class="text-primary d-block mb-0.5">姓名</label>
@@ -167,9 +168,7 @@ current: reservation-apply
             </div>
 
           </div>
-
           <a href="./reservation-done.html" class="btn btn-primary-light text-white w-100">送出</a>
-
         </div>
     </form>
   </section>

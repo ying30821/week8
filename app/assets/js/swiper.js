@@ -84,7 +84,7 @@ const chooseCourseSwiper = new Swiper(".chooseCourse-swiper", {
       spaceBetween: 30,
     },
     992: {
-      slidesPerView: 2.5,
+      slidesPerView: 3,
       grid: {
         rows: 1, 
       },

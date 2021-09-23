@@ -10,6 +10,10 @@ $utilities: map-merge($utilities, ("font-weight": map-merge(map-get($utilities, 
         rfs:false,
       ),
     ),
+    "text-align": map-merge(map-get($utilities, "text-align"),
+      (responsive: true,
+      ),
+    ),
     "width": map-merge(map-get($utilities, "width"),
       (responsive: true,
         values: map-merge(map-get(map-get($utilities, "width"), "values"),
@@ -68,4 +72,8 @@ $value in $zindex-value {
   .zindex-#{$name} {
     z-index: $value;
   }
+}
+
+.opacity-1 {
+  opacity: 1;
 }

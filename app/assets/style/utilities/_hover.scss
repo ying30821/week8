@@ -4,7 +4,20 @@
 
 .btn-primary-light:hover {
   background: $primary;
+  border-color: $primary;
   color: $white;
+}
+
+.btn-secondary:hover {
+  background: $primary-light;
+  border-color: $primary-light;
+  color: $white !important;
+}
+
+.hvr-btn-secondary:hover {
+  background: $primary;
+  border-color: $primary;
+  color: $white !important;
 }
 
 .hvr-border-white:hover {
