@@ -68,7 +68,7 @@ const recommendCourseSwiper = new Swiper(".recommendCourse-swiper", {
     }
   }
 });
-const chooseCourseSwiper = new Swiper(".chooseCourse-swiper", {
+const chooseLevelSwiper = new Swiper(".chooseLevel-swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   grid: {
