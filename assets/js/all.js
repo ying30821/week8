@@ -209,7 +209,7 @@ var recommendCourseSwiper = new Swiper(".recommendCourse-swiper", {
     }
   }
 });
-var chooseCourseSwiper = new Swiper(".chooseCourse-swiper", {
+var chooseLevelSwiper = new Swiper(".chooseLevel-swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   grid: {
