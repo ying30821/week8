@@ -83,12 +83,12 @@ const chooseLevelSwiper = new Swiper(".chooseLevel-swiper", {
       },
       spaceBetween: 30,
     },
-    992: {
+    1200: {
       slidesPerView: 3,
       grid: {
         rows: 1, 
       },
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
   },
   direction: 'horizontal',
