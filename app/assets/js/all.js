@@ -53,6 +53,10 @@ if (main.dataset.page === 'reservation-choose') {
       renderCourseText();
     }
   });
+  continueBtn.addEventListener("click", e => {
+    e.preventDefault();
+    document.location.href = `./reservation-apply.html?${course}`;
+  })
   function renderLesson(index) {
     if (lastLessonIndex) {
       lessonCard[lastLessonIndex].classList.remove("card__lesson--active");
