@@ -10,13 +10,16 @@
   </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
@@ -75,7 +78,7 @@
 </ul>
 
   </header>
-  <main class="pt-3 pb-5.5 pt-md-4 pb-md-5 pb-lg-6.5">
+  <main class="pt-3 pb-5.5 pt-md-4 pb-md-5 pb-lg-6.5" data-page="reservation-done">
   <section class="container">
     <h2 class="fs-2 text-primary text-center mb-1.5 mb-md-1">立即預約</h2>
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2.25 mb-md-2">
@@ -94,14 +97,16 @@
     </nav>
     <div class="row mb-1.5" data-aos="zoom-in-up">
       <div class="col-md-8 col-lg-5 mx-auto">
-        <span class="material-icons-outlined fs-lg text-primary d-flex justify-content-center mb-1">check_circle</span>
+        <span
+          class="material-icons-outlined fs-lg text-primary d-flex justify-content-center mb-1">check_circle</span>
         <h3 class="fs-5 fw-normal text-primary text-center mb-2">已完成預約，以下是您的預約資訊:</h3>
         <div class="card rounded-2 border border-primary-light">
           <div
             class="card-header rounded-top bg-primary text-white d-flex justify-content-between align-items-center px-1.25 py-1">
             <h4 class="fs-6 fw-normal mb-0">預約資訊</h4>
             <button class="btn d-inline-flex p-0" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseReserveDone" aria-expanded="false" aria-controls="collapseReserveDone">
+              data-bs-target="#collapseReserveDone" aria-expanded="false"
+              aria-controls="collapseReserveDone">
               <span class="material-icons text-white fs-4 lh-1">expand_more
               </span>
             </button>
@@ -109,15 +114,15 @@
           <div class="collapse show" id="collapseReserveDone">
             <div class="card-body px-1.25 py-1">
               <h6 class="card-title text-primary mb-1">您預約的是<span
-                  class="fs-5 text-primary-light ms-0.5">首次體驗課程-基礎</span>
+                  class="fs-5 text-primary-light ms-0.5" data-reserve="course">首次體驗課程-基礎</span>
               </h6>
               <ul class="list-unstyled text-primary d-grid gap-0.5">
-                <li>上課預約報到日：2021/07/21</li>
-                <li>預約人：Joanne Chen</li>
-                <li>年齡：18 歲</li>
-                <li>性別：女</li>
-                <li>電子信箱：example123@gmail.com</li>
-                <li>手機號碼：0912-345-678</li>
+                <li>上課預約報到日：<span data-reserve="日期">2021/07/21</span></li>
+                <li>預約人：<span data-reserve="姓名">Joanne Chen</span></li>
+                <li>年齡：<span data-reserve="年齡">18 歲</span></li>
+                <li>性別：<span data-reserve="性別">女</span></li>
+                <li>電子信箱：<span data-reserve="Email">example123@gmail.com</span></li>
+                <li>手機號碼：<span data-reserve="手機號碼">0912-345-678</span></li>
               </ul>
             </div>
           </div>
@@ -127,7 +132,8 @@
     <div class="row" data-aos="zoom-in-up">
       <div class="col-md-6 col-lg-4 mx-auto">
         <h3 class="fs-5 text-primary text-center mb-0.5">上課注意事項</h3>
-        <p class="text-primary mb-2">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。 如欲更改體驗時間請提前通知我們喔！</p>
+        <p class="text-primary mb-2">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。
+          如欲更改體驗時間請提前通知我們喔！</p>
         <a href="./index.html" class="btn btn-primary-light text-white w-100">返回首頁</a>
       </div>
     </div>
@@ -175,8 +181,11 @@
 </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>

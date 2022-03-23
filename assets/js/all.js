@@ -1,20 +1,7 @@
 "use strict";
 
-$(function () {//console.log('Hello Bootstrap5');
-});
-AOS.init(); //datepicker
-
-var elem = document.querySelector('input[name="datepicker"]');
-
-if (elem !== null) {
-  var datepicker = new Datepicker(elem, {
-    nextArrow: '>',
-    prevArrow: '<',
-    buttonClass: 'btn primary'
-  });
-}
-
-var main = document.querySelector('main'); //課程介紹
+AOS.init();
+var main = document.querySelector('main');
 
 if (main.dataset.page === 'course') {
   var changeCourseContent = function changeCourseContent(item) {
@@ -35,107 +22,270 @@ if (main.dataset.page === 'course') {
       courseModal.show();
     });
   });
-} //預約介面
-
+}
 
 if (main.dataset.page === 'reservation-choose') {
-  var renderLevel = function renderLevel(activeIndex) {
-    if (lessonArrow[activeIndex].classList.contains("d-none")) {
-      lessonCard.forEach(function (item) {
-        item.classList.add("d-none");
-      });
-      lessonCard[activeIndex].classList.remove("d-none");
-      lessonCard[activeIndex].classList.add("card__lesson--active");
-      lessonArrow[activeIndex].classList.remove("d-none");
-      levelArea.classList.remove("d-none");
-    } else {
-      lessonCard.forEach(function (item) {
-        item.classList.remove("d-none");
-      });
-      lessonCard[activeIndex].classList.remove("card__lesson--active");
-      lessonArrow[activeIndex].classList.add("d-none");
-      levelArea.classList.add("d-none");
-      finalChoose.classList.add("d-none");
-      contReserve.classList.add("d-none");
+  var renderLesson = function renderLesson(index) {
+    if (lastLessonIndex) {
+      lessonCard[lastLessonIndex].classList.remove("card__lesson--active");
+      lessonArrow[lastLessonIndex].classList.add('d-none');
     }
+
+    lessonCard[index].classList.add("card__lesson--active");
+    lessonArrow[index].classList.remove('d-none');
+
+    switch (index) {
+      case "0":
+        lesson = "首次";
+        break;
+
+      case "1":
+        lesson = "短期";
+        break;
+
+      case "2":
+        lesson = "長期";
+        break;
+    }
+
+    lastLessonIndex = index;
   };
 
-  var renderFinalChoose = function renderFinalChoose() {
-    finalChoose.querySelector("span").textContent = "".concat(lesson, "\u9AD4\u9A57\u8AB2\u7A0B-").concat(level);
+  var renderLevel = function renderLevel(index) {
+    if (lastLevelIndex) {
+      levelCard[lastLevelIndex].classList.remove("card__level--active");
+    }
+
+    levelCard[index].classList.add("card__level--active");
+
+    switch (index) {
+      case "0":
+        level = "基礎";
+        break;
+
+      case "1":
+        level = "中階";
+        break;
+
+      case "2":
+        level = "高階";
+        break;
+    }
+
+    lastLevelIndex = index;
   };
 
-  var lesson = '首次';
-  var level = '基礎';
+  var renderCourseText = function renderCourseText() {
+    course = "".concat(lesson, "\u9AD4\u9A57\u8AB2\u7A0B-").concat(level);
+    courseText.querySelector("span").textContent = course;
+  };
+
   var lessonArea = document.querySelector('.js-lessonArea');
   var lessonCard = document.querySelectorAll('.js-lessonCard');
-  var lessonArrow = document.querySelectorAll(".lesson-arrow");
   var levelArea = document.querySelector('.js-levelArea');
-  var finalChoose = document.querySelector(".js-finalChoose");
-  var contReserve = document.querySelector(".js-contReserve");
-  var lastLessonIndex;
-  lessonArrow.forEach(function (item) {
-    item.classList.add("d-none");
-  });
-  levelArea.classList.add("d-none");
-  finalChoose.classList.add("d-none");
-  contReserve.classList.add("d-none"); //OnClickEvent
-
+  var levelCard = document.querySelectorAll(".js-levelCard");
+  var lessonArrow = document.querySelectorAll(".lesson-arrow");
+  var courseText = document.querySelector(".js-courseText");
+  var continueBtn = document.querySelector(".js-contReserve");
+  var lesson = '首次';
+  var level = '基礎';
+  var course;
+  var lastLessonIndex, lastLevelIndex;
   lessonArea.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (e.target.nodeName === "BUTTON") {
       var nowLessonIndex = e.target.dataset.lessonIndex;
-
-      if (contReserve.classList.contains("d-none")) {
-        finalChoose.classList.remove("d-none");
-        contReserve.classList.remove("d-none");
-      }
-
-      if (nowLessonIndex !== lastLessonIndex && lastLessonIndex !== undefined) {
-        lessonCard[lastLessonIndex].classList.remove("card__lesson--active");
-        lessonArrow[lastLessonIndex].classList.add("d-none");
-        levelArea.classList.add("d-none");
-      }
-
-      if (nowLessonIndex === "0") {
-        lesson = "首次";
-        renderLevel(0);
-        lastLessonIndex = "0";
-      } else if (nowLessonIndex === "1") {
-        lesson = "短期";
-        renderLevel(1);
-        lastLessonIndex = "1";
-      } else if (nowLessonIndex === "2") {
-        lesson = "長期";
-        renderLevel(2);
-        lastLessonIndex = "2";
-      }
-
-      renderFinalChoose();
+      if (levelArea.classList.contains("d-none")) levelArea.classList.remove("d-none");
+      if (courseText.classList.contains("d-none")) courseText.classList.remove("d-none");
+      if (continueBtn.classList.contains("d-none")) continueBtn.classList.remove("d-none");
+      renderLesson(nowLessonIndex);
+      renderLevel("0");
+      renderCourseText();
     }
   });
   levelArea.addEventListener("click", function (e) {
     e.preventDefault();
-    var levelCard = document.querySelectorAll(".js-levelCard");
 
-    if (e.target.closest(".js-levelCard") !== null) {
-      levelCard.forEach(function (item) {
-        item.classList.remove("card__level--active");
-      });
-      e.target.closest(".js-levelCard").classList.add("card__level--active");
+    if (e.target.closest(".js-levelCard")) {
       var nowLevel = e.target.closest(".js-levelCard").dataset.levelIndex;
-
-      if (nowLevel === "0") {
-        level = "基礎";
-      } else if (nowLevel === "1") {
-        level = "中階";
-      } else if (nowLevel === "2") {
-        level = "高階";
-      }
-
-      renderFinalChoose();
+      renderLevel(nowLevel);
+      renderCourseText();
     }
   });
+}
+
+if (main.dataset.page === 'reservation-apply') {
+  var init = function init() {
+    splitUrl();
+    initDatepicker();
+  };
+
+  var initDatepicker = function initDatepicker() {
+    if (datepicker) {
+      var myDatepicker = new Datepicker(datepicker, {
+        nextArrow: '>',
+        prevArrow: '<',
+        buttonClass: 'btn primary'
+      });
+    }
+  };
+
+  var formValidate = function formValidate() {
+    inputs.forEach(function (item) {
+      return item.classList.remove("is-invalid");
+    });
+    msgs.forEach(function (item) {
+      return item.textContent = "";
+    });
+    errors = validate(form, constraints);
+
+    if (errors) {
+      Object.keys(errors).forEach(function (item) {
+        var msg = document.querySelector("[data-msg=".concat(item, "]"));
+        var input = document.querySelector("[name=".concat(item, "]"));
+        input.classList.add("is-invalid");
+        var str = "";
+
+        if (errors[item].length > 1) {
+          str = errors[item].join("<br>");
+        } else {
+          str = errors[item];
+        }
+
+        msg.innerHTML = str;
+      });
+    }
+  };
+
+  var splitUrl = function splitUrl() {
+    var url = location.href;
+
+    if (url.indexOf('?') != -1) {
+      var temp = url.split("?");
+      if (!myReserve.course) myReserve.course = '';
+      myReserve.course = decodeURI(temp[1]);
+      _course.textContent = myReserve.course || '首次體驗課程-基礎';
+    }
+  };
+
+  var _course = document.querySelector('.js-course');
+
+  var form = document.querySelector(".js-form");
+  var datepicker = document.querySelector('input[name="日期"]');
+  var inputs = document.querySelectorAll("input[type=text],input[type=number],select");
+  var msgs = document.querySelectorAll('[data-msg]');
+  var sendFormBtn = document.querySelector(".js-sendFormBtn");
+  var constraints = {
+    日期: {
+      presence: {
+        message: "是必填欄位"
+      }
+    },
+    姓名: {
+      presence: {
+        message: "是必填欄位"
+      }
+    },
+    年齡: {
+      presence: {
+        message: "是必填欄位"
+      }
+    },
+    性別: {
+      presence: {
+        message: "是必填欄位"
+      }
+    },
+    Email: {
+      presence: {
+        message: "是必填欄位"
+      },
+      email: {
+        message: "不是正確格式"
+      }
+    },
+    手機號碼: {
+      presence: {
+        message: "是必填欄位"
+      },
+      format: {
+        pattern: "[0-9]+",
+        message: "只能輸入數字"
+      },
+      length: {
+        is: 10,
+        message: "長度不正確"
+      }
+    }
+  };
+  var errors = {};
+  var myReserve = {};
+  inputs.forEach(function (item) {
+    item.addEventListener("change", formValidate);
+  });
+  sendFormBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    formValidate();
+    if (errors) return;
+    inputs.forEach(function (item) {
+      var key = item.getAttribute('name');
+      if (!myReserve[key]) myReserve[key] = '';
+      myReserve[key] = item.value;
+    });
+    var str = '';
+    var arr = Object.entries(myReserve);
+    arr.forEach(function (item, index) {
+      str += "".concat(item[0], "=").concat(item[1]);
+
+      if (index !== arr.length - 1) {
+        str += '&';
+      }
+    });
+    document.location.href = "./reservation-done.html?".concat(str);
+  });
+  init();
+}
+
+if (main.dataset.page === 'reservation-done') {
+  var _init = function _init() {
+    _splitUrl();
+
+    renderReserveData();
+  };
+
+  var _splitUrl = function _splitUrl() {
+    var url = location.href;
+
+    if (url.indexOf('?') != -1) {
+      var temp = url.split("?");
+      var temp2 = temp[1].split("&");
+
+      for (var i = 0; i < temp2.length; i++) {
+        var temp3 = temp2[i].split("=");
+        var key = decodeURI(temp3[0]);
+        var value = decodeURI(temp3[1]);
+        if (!_myReserve[key]) _myReserve[key] = '';
+        _myReserve[key] = value;
+      }
+
+      ;
+    }
+  };
+
+  var renderReserveData = function renderReserveData() {
+    if (Object.keys(_myReserve).length > 0) {
+      var reserves = document.querySelectorAll('[data-reserve]');
+      reserves.forEach(function (item) {
+        var key = item.getAttribute('data-reserve');
+        item.textContent = _myReserve[key];
+      });
+    }
+  };
+
+  var _myReserve = {};
+
+  _init();
 }
 "use strict";
 
