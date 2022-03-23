@@ -113,6 +113,10 @@ if (main.dataset.page === 'reservation-choose') {
       renderCourseText();
     }
   });
+  continueBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.location.href = "./reservation-apply.html?".concat(course);
+  });
 }
 
 if (main.dataset.page === 'reservation-apply') {
