@@ -240,11 +240,11 @@ if (main.dataset.page === 'reservation-done') {
   };
 
   var renderReserveData = function renderReserveData() {
-    if (Object.keys(_myReserve2).length > 0 && _myReserve2.姓名) {
+    if (Object.keys(_myReserve2).length > 0) {
       var reserves = document.querySelectorAll('[data-reserve]');
       reserves.forEach(function (item) {
         var key = item.getAttribute('data-reserve');
-        item.textContent = _myReserve2[key];
+        item.textContent = _myReserve2[key] || '未填寫';
       });
     }
   };
