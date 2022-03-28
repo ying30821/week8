@@ -76,8 +76,8 @@ if (main.dataset.page === 'reservation-choose') {
   };
 
   var renderCourseText = function renderCourseText() {
-    course = "".concat(lesson, "\u9AD4\u9A57\u8AB2\u7A0B-").concat(level);
-    courseText.querySelector("span").textContent = course;
+    myReserve.course = "".concat(lesson, "\u9AD4\u9A57\u8AB2\u7A0B-").concat(level);
+    courseText.querySelector("span").textContent = myReserve.course;
   };
 
   var lessonArea = document.querySelector('.js-lessonArea');
@@ -87,9 +87,9 @@ if (main.dataset.page === 'reservation-choose') {
   var lessonArrow = document.querySelectorAll(".lesson-arrow");
   var courseText = document.querySelector(".js-courseText");
   var continueBtn = document.querySelector(".js-contReserve");
+  var myReserve = {};
   var lesson = '首次';
   var level = '基礎';
-  var course;
   var lastLessonIndex, lastLevelIndex;
   lessonArea.addEventListener('click', function (e) {
     e.preventDefault();
@@ -115,13 +115,15 @@ if (main.dataset.page === 'reservation-choose') {
   });
   continueBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    document.location.href = "./reservation-apply.html?".concat(course);
+    localStorage.setItem("myReserve", JSON.stringify(myReserve));
+    document.location.href = './reservation-apply.html';
   });
 }
 
 if (main.dataset.page === 'reservation-apply') {
   var init = function init() {
-    splitUrl();
+    _myReserve = JSON.parse(localStorage.getItem("myReserve")) || {};
+    course.textContent = _myReserve.course || '首次體驗課程-基礎';
     initDatepicker();
   };
 
@@ -162,19 +164,7 @@ if (main.dataset.page === 'reservation-apply') {
     }
   };
 
-  var splitUrl = function splitUrl() {
-    var url = location.href;
-
-    if (url.indexOf('?') != -1) {
-      var temp = url.split("?");
-      if (!myReserve.course) myReserve.course = '';
-      myReserve.course = decodeURI(temp[1]);
-      _course.textContent = myReserve.course || '首次體驗課程-基礎';
-    }
-  };
-
-  var _course = document.querySelector('.js-course');
-
+  var course = document.querySelector('.js-course');
   var form = document.querySelector(".js-form");
   var datepicker = document.querySelector('input[name="日期"]');
   var inputs = document.querySelectorAll("input[type=text],input[type=number],select");
@@ -224,7 +214,7 @@ if (main.dataset.page === 'reservation-apply') {
     }
   };
   var errors = {};
-  var myReserve = {};
+  var _myReserve = {};
   inputs.forEach(function (item) {
     item.addEventListener("change", formValidate);
   });
@@ -234,60 +224,32 @@ if (main.dataset.page === 'reservation-apply') {
     if (errors) return;
     inputs.forEach(function (item) {
       var key = item.getAttribute('name');
-      if (!myReserve[key]) myReserve[key] = '';
-      myReserve[key] = item.value;
+      if (!_myReserve[key]) _myReserve[key] = '';
+      _myReserve[key] = item.value;
     });
-    var str = '';
-    var arr = Object.entries(myReserve);
-    arr.forEach(function (item, index) {
-      str += "".concat(item[0], "=").concat(item[1]);
-
-      if (index !== arr.length - 1) {
-        str += '&';
-      }
-    });
-    document.location.href = "./reservation-done.html?".concat(str);
+    localStorage.setItem("myReserve", JSON.stringify(_myReserve));
+    document.location.href = './reservation-done.html';
   });
   init();
 }
 
 if (main.dataset.page === 'reservation-done') {
   var _init = function _init() {
-    _splitUrl();
-
+    _myReserve2 = JSON.parse(localStorage.getItem("myReserve")) || {};
     renderReserveData();
   };
 
-  var _splitUrl = function _splitUrl() {
-    var url = location.href;
-
-    if (url.indexOf('?') != -1) {
-      var temp = url.split("?");
-      var temp2 = temp[1].split("&");
-
-      for (var i = 0; i < temp2.length; i++) {
-        var temp3 = temp2[i].split("=");
-        var key = decodeURI(temp3[0]);
-        var value = decodeURI(temp3[1]);
-        if (!_myReserve[key]) _myReserve[key] = '';
-        _myReserve[key] = value;
-      }
-
-      ;
-    }
-  };
-
   var renderReserveData = function renderReserveData() {
-    if (Object.keys(_myReserve).length > 0) {
+    if (Object.keys(_myReserve2).length > 0) {
       var reserves = document.querySelectorAll('[data-reserve]');
       reserves.forEach(function (item) {
         var key = item.getAttribute('data-reserve');
-        item.textContent = _myReserve[key];
+        item.textContent = _myReserve2[key];
       });
     }
   };
 
-  var _myReserve = {};
+  var _myReserve2 = {};
 
   _init();
 }
