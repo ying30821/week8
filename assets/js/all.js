@@ -240,7 +240,7 @@ if (main.dataset.page === 'reservation-done') {
   };
 
   var renderReserveData = function renderReserveData() {
-    if (Object.keys(_myReserve2).length > 0) {
+    if (Object.keys(_myReserve2).length > 0 && _myReserve2.姓名) {
       var reserves = document.querySelectorAll('[data-reserve]');
       reserves.forEach(function (item) {
         var key = item.getAttribute('data-reserve');
