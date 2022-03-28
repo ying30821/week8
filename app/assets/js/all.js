@@ -29,9 +29,9 @@ if (main.dataset.page === 'reservation-choose') {
   const lessonArrow = document.querySelectorAll(".lesson-arrow");
   const courseText = document.querySelector(".js-courseText");
   const continueBtn = document.querySelector(".js-contReserve");
+  const myReserve = {};
   let lesson = '首次';
   let level = '基礎';
-  let course;
   let lastLessonIndex, lastLevelIndex;
   lessonArea.addEventListener('click', e => {
     e.preventDefault();
@@ -55,7 +55,8 @@ if (main.dataset.page === 'reservation-choose') {
   });
   continueBtn.addEventListener("click", e => {
     e.preventDefault();
-    document.location.href = `./reservation-apply.html?${course}`;
+    localStorage.setItem("myReserve", JSON.stringify(myReserve));
+    document.location.href = './reservation-apply.html';
   })
   function renderLesson(index) {
     if (lastLessonIndex) {
@@ -98,8 +99,8 @@ if (main.dataset.page === 'reservation-choose') {
     lastLevelIndex = index;
   }
   function renderCourseText() {
-    course = `${lesson}體驗課程-${level}`;
-    courseText.querySelector("span").textContent = course;
+    myReserve.course = `${lesson}體驗課程-${level}`;
+    courseText.querySelector("span").textContent = myReserve.course;
   }
 }
 if (main.dataset.page === 'reservation-apply') {
@@ -167,19 +168,13 @@ if (main.dataset.page === 'reservation-apply') {
       if (!myReserve[key]) myReserve[key] = '';
       myReserve[key] = item.value;
     });
-    let str = '';
-    const arr = Object.entries(myReserve);
-    arr.forEach((item, index) => {
-      str += `${item[0]}=${item[1]}`;
-      if (index !== arr.length - 1) {
-        str += '&';
-      }
-    })
-    document.location.href = `./reservation-done.html?${str}`;
+    localStorage.setItem("myReserve", JSON.stringify(myReserve));
+    document.location.href = './reservation-done.html';
   });
   init();
   function init() {
-    splitUrl();
+    myReserve = JSON.parse(localStorage.getItem("myReserve")) || {};
+    course.textContent = myReserve.course || '首次體驗課程-基礎';
     initDatepicker();
   }
   function initDatepicker() {
@@ -210,36 +205,13 @@ if (main.dataset.page === 'reservation-apply') {
       })
     }
   }
-  function splitUrl() {
-    let url = location.href;
-    if (url.indexOf('?') != -1) {
-      let temp = url.split("?");
-      if (!myReserve.course) myReserve.course = '';
-      myReserve.course = decodeURI(temp[1]);
-      course.textContent = myReserve.course || '首次體驗課程-基礎';
-    }
-  }
 }
 if (main.dataset.page === 'reservation-done') {
   let myReserve = {};
   init();
   function init() {
-    splitUrl();
+    myReserve = JSON.parse(localStorage.getItem("myReserve")) || {};
     renderReserveData();
-  }
-  function splitUrl() {
-    let url = location.href;
-    if (url.indexOf('?') != -1) {
-      let temp = url.split("?");
-      let temp2 = temp[1].split("&");
-      for (let i = 0; i < temp2.length; i++) {
-        const temp3 = temp2[i].split("=");
-        const key = decodeURI(temp3[0]);
-        const value = decodeURI(temp3[1]);
-        if (!myReserve[key]) myReserve[key] = '';
-        myReserve[key] = value;
-      };
-    }
   }
   function renderReserveData() {
     if (Object.keys(myReserve).length > 0) {
