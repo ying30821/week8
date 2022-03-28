@@ -214,7 +214,7 @@ if (main.dataset.page === 'reservation-done') {
     renderReserveData();
   }
   function renderReserveData() {
-    if (Object.keys(myReserve).length > 0) {
+    if (Object.keys(myReserve).length > 0 && myReserve.姓名) {
       const reserves = document.querySelectorAll('[data-reserve]');
       reserves.forEach(item => {
         const key = item.getAttribute('data-reserve');
