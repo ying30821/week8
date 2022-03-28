@@ -214,11 +214,11 @@ if (main.dataset.page === 'reservation-done') {
     renderReserveData();
   }
   function renderReserveData() {
-    if (Object.keys(myReserve).length > 0 && myReserve.姓名) {
+    if (Object.keys(myReserve).length > 0) {
       const reserves = document.querySelectorAll('[data-reserve]');
       reserves.forEach(item => {
         const key = item.getAttribute('data-reserve');
-        item.textContent = myReserve[key];
+        item.textContent = myReserve[key] || '未填寫';
       });
     }
   }
